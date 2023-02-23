@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: initial;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    padding: 19px 22px 0;
+    margin-bottom: 120px;
+}
+
+.nav{
+    margin-left: auto;
+}
+
+.ul{
+    list-style: none;
+}
+
+.ul__li {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2.4px;
+    margin-bottom: 12px;
+}
+
+.ul__li:last-of-type{
+    margin-bottom: 0;
+}
+
+.ul__link{
+    text-decoration: none;
+    color: #000;
+}
+
+.form__title{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.165px;
+    color: #1B2733;
+    margin-bottom: 18px;
+}
+
+.main{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-box__name{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.09px;
+    color: #6B6C6F;
+    text-transform: capitalize;
+    padding-bottom: 10.5px;
+}
+
+.form-box__label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17.6px;
+}
+
+.form-box__label_email{
+    position: relative;
+}
+
+.form-box__label_email::before{
+    content: "";
+    position: absolute;
+    background: url(..//img/Suche.svg) no-repeat;
+    top: 37px;
+    left: 10px;
+    width: 18px;
+    height: 15px;
+}
+
+.form-box__label:last-of-type{
+    margin-bottom: 24px;
+}
+
+.form-box__input{
+    border-radius: 20px;
+    border: 1px solid #DFE2E6;
+    padding: 12px 20px 8px 40px;
+}
+
+.btn-box{
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+}
+
+.form-box__btn{
+    padding: 8px 36px;
+    border: 1px solid #E41E26;
+    border-radius: 20px;
+}
+
+.btn-box__link{
+    font-family: 'Montserrat';
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.105px;
+    font-size: 14px;
+}
+
+.form-box__btn_register{
+    background: #fff;
+}
+
+.btn-box__link_red{
+    color: #E41E26;
+}
+
+.form-box__btn_login{
+    background: #E41E26;
+    padding: 8px 45px;
+}
+
+.btn-box__link_red_white{
+    color: #fff;
+}
