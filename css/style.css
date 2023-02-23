@@ -12,14 +12,57 @@ html{
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+.visible{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #0000004f;
+}
+
 .header{
     display: flex;
     padding: 19px 22px 0;
     margin-bottom: 120px;
 }
 
-.nav{
+.menu-burder{
     margin-left: auto;
+}
+
+.menu-burger__bg{
+    background: #000;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 4px;
+}
+
+.menu-burger__bg:last-of-type{
+    margin-bottom: 0;
+}
+
+.nav{
+    padding: 20px;
+    background: #fdf;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    z-index: 2;
+    transform: translateX(1000px);
+}
+
+.open{
+    transform: translateX(0);
 }
 
 .ul{
@@ -32,7 +75,11 @@ html{
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 2.4px;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .ul__li:last-of-type{
@@ -88,10 +135,34 @@ html{
 .form-box__label_email::before{
     content: "";
     position: absolute;
-    background: url(..//img/Suche.svg) no-repeat;
+    background: url("../img/Suche.svg") no-repeat;
     top: 37px;
     left: 10px;
     width: 18px;
+    height: 15px;
+}
+
+.form-box__label_pass{
+    position: relative;
+}
+
+.form-box__label_pass::before{
+    content: "";
+    position: absolute;
+    background: url("../img/key.svg") no-repeat;
+    top: 38px;
+    left: 10px;
+    width: 20px;
+    height: 15px;
+}
+
+.form-box__label_pass::after{
+    content: "";
+    position: absolute;
+    background: url("../img/eye.svg") no-repeat;
+    top: 39px;
+    right: 12px;
+    width: 20px;
     height: 15px;
 }
 
@@ -102,13 +173,18 @@ html{
 .form-box__input{
     border-radius: 20px;
     border: 1px solid #DFE2E6;
-    padding: 12px 20px 8px 40px;
+    padding: 12px 40px 8px;
+}
+
+.form-box__input:focus {
+    outline: none;
 }
 
 .btn-box{
     display: flex;
     justify-content: space-between;
     gap: 26px;
+    margin-bottom: 20px;
 }
 
 .form-box__btn{
@@ -127,6 +203,12 @@ html{
 
 .form-box__btn_register{
     background: #fff;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.form-box__btn_register:hover{
+    cursor: pointer;
+    background: #efefef;
 }
 
 .btn-box__link_red{
@@ -136,8 +218,42 @@ html{
 .form-box__btn_login{
     background: #E41E26;
     padding: 8px 45px;
+    border: 0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+}
+
+.form-box__btn_login:hover{
+    background: #a20e13;
+    cursor: pointer;
 }
 
 .btn-box__link_red_white{
     color: #fff;
+}
+
+.form-box__flex-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.form-box__checkbox{
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;   
+}
+
+.form-box__link,
+.form-box__check-remember{
+    font-family: 'Montserrat';
+    padding-left: 2px;
+    color: #6B6C6F;
+    font-size: 13px;
+}
+
+.form-box__link:hover,
+.form-box__check-remember:hover {
+    color: #353536;
+    cursor: pointer;
 }

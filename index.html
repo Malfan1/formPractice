@@ -8,20 +8,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+    <div class="visible"></div>
     <header class="header">
         <div class="logo">
             <img class="logo__img" src="img/logo.svg" alt="">
         </div>
 
-        <nav class="nav">
-            <ul class="ul">
-                <li class="ul__li"><a class="ul__link"  href="#">FIND A JOB </a></li>
-                <li class="ul__li"><a class="ul__link" href="#">FIND A CANDIDATE</a></li>
-                <li class="ul__li"><a class="ul__link" href="#">APPLY TO TEACH</a></li>
-            </ul>
-        </nav>
+        <div class="menu-burder">
+            <p class="menu-burger__bg"></p>
+            <p class="menu-burger__bg"></p>
+            <p class="menu-burger__bg"></p>
+        </div>
+        
+        
     </header>
+    <nav class="nav">
+        <ul class="ul">
+            <li class="ul__li"><a class="ul__link"  href="#">FIND A JOB </a></li>
+            <li class="ul__li"><a class="ul__link" href="#">FIND A CANDIDATE</a></li>
+            <li class="ul__li"><a class="ul__link" href="#">APPLY TO TEACH</a></li>
+        </ul>
+    </nav>
     <main class="main">
         <form class="form">
             <h1 class="form__title">Login to your account</h1>
@@ -31,7 +38,7 @@
                     <input class="form-box__input" type="email" placeholder="Your e-mail">
                 </label>
 
-                <label class="form-box__label" for="password">
+                <label class="form-box__label form-box__label_pass" for="password">
                     <p class="form-box__name" id="password">password</p>
                     <input class="form-box__input" type="password" placeholder="Your password">
                 </label>
@@ -40,8 +47,25 @@
                     <button class="form-box__btn form-box__btn_register"><a class="btn-box__link btn-box__link_red" href="#">Regitser</a></button>
                     <button class="form-box__btn form-box__btn_login"><a class="btn-box__link btn-box__link_red_white" href="#">Login</a></button>
                </div>
+
+               <div class="form-box__flex-down">
+                <label class="form-box__check" for="remember">
+                    <input class="form-box__checkbox" class="" type="checkbox" id="remember">
+                    <span class="form-box__check-remember">Remember me</span>
+               </label>
+               <span class="form-box__pass"><a class="form-box__link" href="#">Forgot password?</a></span>
+               </div>
             </div>
         </form>
     </main>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(".menu-burder").click(function(){
+            $(".nav").addClass("open");
+        });
+
+        
+    </script>
 </body>
 </html>
